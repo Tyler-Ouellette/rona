@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useStats from '../utils/useStats';
 import Stats from './Stats';
+import Flag from 'react-flags'
 
 export default function CountrySelector() {
 	const { stats: countries, loading, error } = useStats(
@@ -13,7 +14,7 @@ export default function CountrySelector() {
 
 	return (
 		<div>
-			<h2>Currently Showing {selectedCountry}</h2>
+			<h2>Currently Showing {selectedCountry} <Flag name="CAN" format="png" shiny={true} /></h2>
 			<select
 				onChange={(e) => {
 					setSelectedCountry(e.target.value);
