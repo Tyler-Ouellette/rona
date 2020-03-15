@@ -1,0 +1,318 @@
+@import "https://thevirustracker.com/timeline/fontmap.css";@font-face {
+    font-family: "Austin News Deck";
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Italic.eot");
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Italic.eot?#iefix") format("embedded-opentype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Italic.woff2") format("woff2"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Italic.woff") format("woff"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Italic.ttf") format("truetype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Italic.svg#Austin+News+Deck+Web-Italic") format("svg");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Austin News Deck";
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Medium.eot");
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Medium.eot?#iefix") format("embedded-opentype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Medium.woff2") format("woff2"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Medium.woff") format("woff"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Medium.ttf") format("truetype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Medium.svg#Austin+News+Deck+Web-Medium") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Austin News Deck";
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Roman.eot");
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Roman.eot?#iefix") format("embedded-opentype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Roman.woff2") format("woff2"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Roman.woff") format("woff"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Roman.ttf") format("truetype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Medium.svg#Austin+News+Deck+Web-Roman") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Austin News Deck";
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Semibold.eot");
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Semibold.eot?#iefix") format("embedded-opentype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Semibold.woff2") format("woff2"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Semibold.woff") format("woff"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Semibold.ttf") format("truetype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Medium.svg#Austin+News+Deck+Web-Semibold") format("svg");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Austin News Deck";
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Fat.eot");
+    src: url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Fat.eot?#iefix") format("embedded-opentype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Fat.woff2") format("woff2"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Fat.woff") format("woff"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Fat.ttf") format("truetype"), url("https://thevirustracker.com/timeline/fonts/Austin+News+Deck+Web-Medium.svg#Austin+News+Deck+Web-Fat") format("svg");
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Telesans Agate";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Regular.eot");
+    src: url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Regular.eot?#iefix") format("embedded-opentype"), url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Regular.woff") format("woff"), url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Regular.svg#Telesans+Agate-Regular") format("svg"), url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Telesans Agate";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Bold.eot");
+    src: url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Bold.eot?#iefix") format("embedded-opentype"), url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Bold.woff") format("woff"), url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Bold.svg#Telesans+Agate-Bold") format("svg"), url("https://thevirustracker.com/timeline/fonts/Telesans+Agate-Bold.ttf") format("truetype");
+}
+
+svg {
+    max-height: 100%;
+}
+
+.toggleBox {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggleSet {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.toggleButton {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 9px;
+    margin-left: 3px;
+    margin-right: 6px;
+    border: 1px solid #bbb;
+    position: relative;
+}
+
+.currentDate {
+    font-family: "Telesans Agate";
+    float: right;
+    font-size: 1.2em;
+    position: relative;
+    top: 135px;
+    right: 20px;
+}
+
+.blob {
+    border-radius: 4px;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.active .blob {
+    background-color: #04777B;
+}
+
+.toggleLabel {
+    margin-top: 2px;
+    line-height: 16px;
+    font-family: "Telesans Agate";
+}
+
+#subheader {
+    display: block;
+    line-height: 22px;
+    font-family: 'Austin News Deck';
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    color: #333333;
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+.land {
+    fill: #eee;
+    fill-opacity: 1;
+    stroke: #bbb;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+}
+
+.infected {
+    stroke: #e6453b;
+    stroke-width: 0.5;
+}
+
+@media screen and (max-width: 500px) {
+    .infected {
+        stroke-width: 0.5px;
+    }
+
+    .countryLabelText {
+        font-weight: bold;
+    }
+}
+
+.source {
+    cursor: default;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    list-style-type: none;
+    font-family: 'Telesans Agate',Arial,sans-serif;
+    color: #888888;
+    font-size: 12px;
+    line-height: 1.5;
+    background-repeat: no-repeat;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.countryLabelTextDummy {
+    font-size: 28px;
+    text-anchor: middle;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.countryLabelText {
+    font-size: 22px;
+    text-anchor: middle;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
+}
+
+.countryLabelNumber {
+    fill: #04777B;
+    font-size: 28px;
+    text-anchor: middle;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
+}
+
+@media screen and (max-width: 500px) {
+    .countryLabelText {
+        font-size: 32px;
+    }
+
+    .countryLabelNumber {
+        font-size: 38px;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
+    }
+}
+
+#SVGmap text {
+    text-transform: uppercase;
+}
+
+.range {
+    margin-top: 15px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.playpause {
+    width: 25px;
+    height: 25px;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 5px;
+    background: #eee;
+    border: 1px solid #bbb;
+    color: #04777B;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.playpause svg {
+    fill: #04777B;
+}
+
+.slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    height: 25px;
+    background: #eee;
+    border: 1px solid #bbb;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+    margin-bottom: 1px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04777B;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04777B;
+    cursor: pointer;
+}
+
+.sliderticks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 14px 0 46px;
+}
+
+.sliderticks p {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    width: 1px;
+    background: #bbb;
+    height: 8px;
+    line-height: 40px;
+    margin: 1px 0 20px 0;
+}
+
+.sliderticks p.monday {
+    background: black;
+    height: 12px;
+}
+
+.tooltip {
+    font-family: "Telesans Agate", sans-serif;
+    text-align: center;
+}
