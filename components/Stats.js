@@ -22,8 +22,10 @@ export default function Stats({ url }) {
 	const { stats, loading, error } = useStats(url);
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error...</p>;
-	return (
-		<StatGrid>
+	if (stats.confirmed && stats.deaths && stats.recovered) {
+
+		return (
+			<StatGrid>
 			<StatBlock>
 				<h3>Confirmed: </h3>
 				<span>{stats.confirmed.value}</span>
@@ -37,5 +39,24 @@ export default function Stats({ url }) {
 				<span>{stats.recovered.value}</span>
 			</StatBlock>
 		</StatGrid>
-	);
+		);
+	}
+	else {
+		return (
+			<StatGrid>
+				<StatBlock>
+					<h3>Confirmed: </h3>
+					<span>Unknown</span>
+				</StatBlock>
+				<StatBlock>
+					<h3>Deaths: </h3>
+					<span>Unknown</span>
+				</StatBlock>
+				<StatBlock>
+					<h3>Recovered: </h3>
+					<span>Unknown</span>
+				</StatBlock>
+			</StatGrid>
+		);
+	}
 }

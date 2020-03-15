@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import useStats from '../utils/useStats';
 import Stats from './Stats';
-import Flag from 'react-flags'
+import Flag from 'react-world-flags'
 
 export default function CountrySelector() {
 	const { stats: countries, loading, error } = useStats(
@@ -14,8 +14,7 @@ export default function CountrySelector() {
 
 	return (
 		<div>
-			<h2>Currently Showing {selectedCountry} <Flag name="CAN" format="png" shiny={true} /></h2>
-			<select
+			<select style={{ width: '300px', padding: '5px', margin: '10px','font-size':'16px'}}
 				onChange={(e) => {
 					setSelectedCountry(e.target.value);
 				}}>
@@ -28,6 +27,8 @@ export default function CountrySelector() {
 					</option>
 				))}
 			</select>
+			<h2>Currently Showing</h2>
+			<Flag height="128" title={selectedCountry} alt={selectedCountry} code={selectedCountry} />
 			<Stats url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`} />
 		</div>
 	);

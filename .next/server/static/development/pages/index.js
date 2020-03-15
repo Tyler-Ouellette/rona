@@ -107,9 +107,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils_useStats__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/useStats */ "./utils/useStats.js");
 /* harmony import */ var _Stats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Stats */ "./components/Stats.js");
-/* harmony import */ var react_flags__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-flags */ "react-flags");
-/* harmony import */ var react_flags__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_flags__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\CountrySelector.js";
+/* harmony import */ var react_world_flags__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-world-flags */ "react-world-flags");
+/* harmony import */ var react_world_flags__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_world_flags__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/components/CountrySelector.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -153,28 +153,19 @@ function CountrySelector() {
       lineNumber: 16
     },
     __self: this
-  }, __jsx("h2", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
+  }, __jsx("select", {
+    style: {
+      width: '300px',
+      padding: '5px',
+      margin: '10px',
+      'font-size': '16px'
     },
-    __self: this
-  }, "Currently Showing ", selectedCountry, " ", __jsx(react_flags__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    name: "CAN",
-    format: "png",
-    shiny: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  })), __jsx("select", {
     onChange: e => {
       setSelectedCountry(e.target.value);
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     },
     __self: this
   }, Object.entries(countries.countries).map(([country, code]) => __jsx("option", {
@@ -183,14 +174,30 @@ function CountrySelector() {
     value: countries.iso3[code],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: this
-  }, country))), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    url: `https://covid19.mathdro.id/api/countries/${selectedCountry}`,
+  }, country))), __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, "Currently Showing"), __jsx(react_world_flags__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    height: "128",
+    title: selectedCountry,
+    alt: selectedCountry,
+    code: selectedCountry,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
+    },
+    __self: this
+  }), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    url: `https://covid19.mathdro.id/api/countries/${selectedCountry}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
     },
     __self: this
   }));
@@ -213,7 +220,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_useStats__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/useStats */ "./utils/useStats.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\Stats.js";
+var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/components/Stats.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -255,67 +262,132 @@ function Stats({
     },
     __self: this
   }, "Error...");
-  return __jsx(StatGrid, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, __jsx(StatBlock, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, "Confirmed: "), __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, stats.confirmed.value)), __jsx(StatBlock, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "Deaths: "), __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, stats.deaths.value)), __jsx(StatBlock, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, "Recovered: "), __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, stats.recovered.value)));
+
+  if (stats.confirmed && stats.deaths && stats.recovered) {
+    return __jsx(StatGrid, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, __jsx(StatBlock, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, __jsx("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, "Confirmed: "), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }, stats.confirmed.value)), __jsx(StatBlock, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, __jsx("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }, "Deaths: "), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, stats.deaths.value)), __jsx(StatBlock, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, __jsx("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, "Recovered: "), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }, stats.recovered.value)));
+  } else {
+    return __jsx(StatGrid, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, __jsx(StatBlock, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }, __jsx("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, "Confirmed: "), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }, "Unknown")), __jsx(StatBlock, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }, __jsx("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }, "Deaths: "), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, "Unknown")), __jsx(StatBlock, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }, __jsx("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    }, "Recovered: "), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: this
+    }, "Unknown")));
+  }
 }
 
 /***/ }),
@@ -336,7 +408,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_CountrySelector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/CountrySelector */ "./components/CountrySelector.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\pages\\index.js";
+var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -361,17 +433,29 @@ function IndexPage() {
       lineNumber: 15
     },
     __self: this
-  }), __jsx(_components_Stats__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    url: "https://covid19.mathdro.id/api",
+  }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
-  }), __jsx(_components_CountrySelector__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "Corona Virus Tracking App"), __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
+    },
+    __self: this
+  }, "Global Stats"), __jsx(_components_Stats__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    url: "https://covid19.mathdro.id/api",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }), __jsx(_components_CountrySelector__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
     },
     __self: this
   }));
@@ -407,6 +491,8 @@ function useStats(url) {
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     async function fetchData() {
+      try {} catch (error) {}
+
       setLoading(true);
       setError();
       const data = await fetch(url).then(res => res.json()).catch(err => {
@@ -434,7 +520,7 @@ function useStats(url) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Ouell\Documents\GitHub\rona\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/tylerouellette/Documents/GitHub/rona/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -450,14 +536,14 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-flags":
-/*!******************************!*\
-  !*** external "react-flags" ***!
-  \******************************/
+/***/ "react-world-flags":
+/*!************************************!*\
+  !*** external "react-world-flags" ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react-flags");
+module.exports = require("react-world-flags");
 
 /***/ }),
 

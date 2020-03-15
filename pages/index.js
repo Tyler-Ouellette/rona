@@ -13,6 +13,8 @@ export default function IndexPage() {
 	return (
 		<div>
 			<GlobalStyle />
+			<h1>Corona Virus Tracking App</h1>
+			<h3>Global Stats</h3>
 			<Stats url='https://covid19.mathdro.id/api' />
 			<CountrySelector />
 		</div>
