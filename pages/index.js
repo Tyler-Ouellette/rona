@@ -1,6 +1,6 @@
-import Stats from "../components/Stats";
-import CountrySelector from "../components/CountrySelector";
-import { createGlobalStyle } from "styled-components";
+import Stats from '../components/Stats';
+import CountrySelector from '../components/CountrySelector';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 html {
@@ -10,11 +10,11 @@ html {
 `;
 
 export default function IndexPage() {
-  return (
-    <div>
-      <GlobalStyle />
-      <Stats url="https://covid19.mathdro.id/api" />
-      <CountrySelector />
-    </div>
-  );
+	return (
+		<div>
+			<GlobalStyle />
+			<Stats url='https://covid19.mathdro.id/api' />
+			<CountrySelector />
+		</div>
+	);
 }

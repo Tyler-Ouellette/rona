@@ -23,12 +23,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 function CountrySelector() {
-  var _useStats = Object(_utils_useStats__WEBPACK_IMPORTED_MODULE_2__["default"])("https://covid19.mathdro.id/api/countries"),
+  var _useStats = Object(_utils_useStats__WEBPACK_IMPORTED_MODULE_2__["default"])('https://covid19.mathdro.id/api/countries'),
       countries = _useStats.stats,
       loading = _useStats.loading,
       error = _useStats.error;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])("USA"),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])('USA'),
       selectedCountry = _useState[0],
       setSelectedCountry = _useState[1];
 
@@ -85,7 +85,7 @@ function CountrySelector() {
       value: countries.iso3[code],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 22
       },
       __self: this
     }, country);
@@ -93,7 +93,7 @@ function CountrySelector() {
     url: "https://covid19.mathdro.id/api/countries/".concat(selectedCountry),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 30
     },
     __self: this
   }));
@@ -4559,8 +4559,6 @@ function useStats(url) {
       setError = _useState3[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    console.log('Mounting or updating');
-
     function fetchData() {
       var data;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function fetchData$(_context) {
