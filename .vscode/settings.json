@@ -1,0 +1,15 @@
+{
+    "editor.formatOnSave": true,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.printWidth": 100,
+    "prettier.requireConfig": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "all",
+    "prettier.useTabs": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "css.lint.hexColorLength": "warning",
+    "files.trimTrailingWhitespace": true
+}
