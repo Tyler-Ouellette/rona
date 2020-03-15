@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -207,19 +207,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const StatGrid = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
 `;
 const StatBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  background: #f2f2f2;
-  padding: 2rem;
-  border-radius: 2rem;
-  font-size: 2rem;
-  text-align: center;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	background: #f2f2f2;
+	padding: 2rem;
+	border-radius: 2rem;
+	font-size: 2rem;
+	text-align: center;
 `;
 function Stats({
   url
@@ -229,79 +229,78 @@ function Stats({
     loading,
     error
   } = Object(_utils_useStats__WEBPACK_IMPORTED_MODULE_1__["default"])(url);
-  console.log(stats, loading, error);
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: this
   }, "Loading...");
   if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: this
   }, "Error...");
   return __jsx(StatGrid, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 26
     },
     __self: this
   }, __jsx(StatBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 27
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 28
     },
     __self: this
   }, "Confirmed: "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }, stats.confirmed.value)), __jsx(StatBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 32
     },
     __self: this
   }, "Deaths: "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 33
     },
     __self: this
   }, stats.deaths.value)), __jsx(StatBlock, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 35
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 36
     },
     __self: this
   }, "Recovered: "), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
     },
     __self: this
   }, stats.recovered.value)));
@@ -395,12 +394,11 @@ function useStats(url) {
     1: setError
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    console.log("Mounting or updating");
+    console.log('Mounting or updating');
 
     async function fetchData() {
       setLoading(true);
       setError();
-      console.log("Fetching Data");
       const data = await fetch(url).then(res => res.json()).catch(err => {
         setError(err);
       });
@@ -419,7 +417,7 @@ function useStats(url) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
