@@ -9,6 +9,8 @@ html {
 }
 `;
 
+//https://thevirustracker.com/api
+
 export default function IndexPage() {
 	return (
 		<div>
