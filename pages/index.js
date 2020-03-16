@@ -31,7 +31,22 @@ display: inherit;
     background: rgba(255,255,255,.03)!important;
     border: 2px solid rgba(255,255,255,.25);
     box-shadow: 0 0 30px 0 rgba(0,0,0,.4);
-    b
+
+
+	.tile-list-hover-effect--arrow .tile:hover {
+    background: rgba(255,255,255,.03)!important;
+    transform: scale(1.1);
+    border: 2px solid #495bc1;
+}
+
+.tile-list-hover-effect--arrow .tile {
+    min-height: 270px;
+    transition: all .45s ease;
+    transition-property: all;
+    transition-duration: 0.45s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
 */
 
 export default function IndexPage() {
