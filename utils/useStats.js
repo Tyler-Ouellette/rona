@@ -8,10 +8,7 @@ export default function useStats(url) {
 		() => {
 			async function fetchData() {
 				try {
-					
-				} catch (error) {
-
-				}
+				} catch (error) {}
 				setLoading(true);
 				setError();
 				const data = await fetch(url).then((res) => res.json()).catch((err) => {

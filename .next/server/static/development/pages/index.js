@@ -93,6 +93,75 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Card.js":
+/*!****************************!*\
+  !*** ./components/Card.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Card; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\Card.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const CardContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+	display: 'flex';
+	justify-content: 'center';
+	width: '100%';
+	text-align: 'center';
+`;
+function Card({
+  title
+}) {
+  return __jsx(CardContainer, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "The Title is ", title), __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "This can be data?"));
+}
+
+/***/ }),
+
+/***/ "./components/Carousel.js":
+/*!********************************!*\
+  !*** ./components/Carousel.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Carousel; });
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_0__);
+
+function Carousel() {
+  return `<h1>This is working</h1>`;
+}
+
+/***/ }),
+
 /***/ "./components/CountrySelector.js":
 /*!***************************************!*\
   !*** ./components/CountrySelector.js ***!
@@ -109,13 +178,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Stats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Stats */ "./components/Stats.js");
 /* harmony import */ var react_world_flags__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-world-flags */ "react-world-flags");
 /* harmony import */ var react_world_flags__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_world_flags__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/components/CountrySelector.js";
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\CountrySelector.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
+
+const Form = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div`
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	background: #4775c9;
+	padding: 2rem;
+	border-radius: 2rem;
+	font-size: 2rem;
+	text-align: center;
+`;
 function CountrySelector() {
   const {
     stats: countries,
@@ -129,28 +211,34 @@ function CountrySelector() {
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 23
     },
     __self: this
   }, "Loading...");
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 24
     },
     __self: this
   }, "Loading...");
   if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 25
     },
     __self: this
   }, "Error...");
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx(Form, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
     },
     __self: this
   }, __jsx("select", {
@@ -165,7 +253,7 @@ function CountrySelector() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 30
     },
     __self: this
   }, Object.entries(countries.countries).map(([country, code]) => __jsx("option", {
@@ -174,13 +262,13 @@ function CountrySelector() {
     value: countries.iso3[code],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 41
     },
     __self: this
   }, country))), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 49
     },
     __self: this
   }, "Currently Showing"), __jsx(react_world_flags__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -190,17 +278,36 @@ function CountrySelector() {
     code: selectedCountry,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 50
     },
     __self: this
-  }), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  })), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_2__["default"], {
     url: `https://covid19.mathdro.id/api/countries/${selectedCountry}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 57
     },
     __self: this
   }));
+}
+
+/***/ }),
+
+/***/ "./components/Navbar.js":
+/*!******************************!*\
+  !*** ./components/Navbar.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Navbar; });
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_0__);
+
+function Navbar() {
+  return `<This is the Nav>`;
 }
 
 /***/ }),
@@ -220,7 +327,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_useStats__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/useStats */ "./utils/useStats.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/components/Stats.js";
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\Stats.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -267,61 +374,61 @@ function Stats({
     return __jsx(StatGrid, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 27
       },
       __self: this
     }, __jsx(StatBlock, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 28
       },
       __self: this
     }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 29
       },
       __self: this
     }, "Confirmed: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 30
       },
       __self: this
     }, stats.confirmed.value)), __jsx(StatBlock, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 32
       },
       __self: this
     }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 33
       },
       __self: this
     }, "Deaths: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 34
       },
       __self: this
     }, stats.deaths.value)), __jsx(StatBlock, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 36
       },
       __self: this
     }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 37
       },
       __self: this
     }, "Recovered: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 38
       },
       __self: this
     }, stats.recovered.value)));
@@ -329,61 +436,61 @@ function Stats({
     return __jsx(StatGrid, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 44
       },
       __self: this
     }, __jsx(StatBlock, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 45
       },
       __self: this
     }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 46
       },
       __self: this
     }, "Confirmed: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 47
       },
       __self: this
     }, "Unknown")), __jsx(StatBlock, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 49
       },
       __self: this
     }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 50
       },
       __self: this
     }, "Deaths: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 51
       },
       __self: this
     }, "Unknown")), __jsx(StatBlock, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 53
       },
       __self: this
     }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 54
       },
       __self: this
     }, "Recovered: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 55
       },
       __self: this
     }, "Unknown")));
@@ -408,9 +515,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_CountrySelector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/CountrySelector */ "./components/CountrySelector.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/pages/index.js";
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.js");
+/* harmony import */ var _components_Carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Carousel */ "./components/Carousel.js");
+/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Card */ "./components/Card.js");
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
 
 
 
@@ -419,43 +533,118 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-seif;
 
 }
+`; //https://thevirustracker.com/api
+
+/*  Extra Colour #/0f1419 I like with the https://dt-cdn.net/images/index-header-gradient-30474b72ac.svg
+    display: inherit;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-preferred-size: calc(100% - 1.25rem)!important;
+    flex-basis: calc(100% - 1.25rem)!important;
+    max-width: calc(100% - 1.25rem)!important;
+    position: relative;
+    padding: 1.5rem;
+    overflow: hidden;
+    transition: background-color .45s ease;
+    transition-property: background-color;
+    transition-duration: 0.45s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background: rgba(255,255,255,.03)!important;
+    border: 2px solid rgba(255,255,255,.25);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.4);
+
+
+	.tile-list-hover-effect--arrow .tile:hover {
+    background: rgba(255,255,255,.03)!important;
+    transform: scale(1.1);
+    border: 2px solid #495bc1;
+}
+
+.tile-list-hover-effect--arrow .tile {
+    min-height: 270px;
+    transition: all .45s ease;
+    transition-property: all;
+    transition-duration: 0.45s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+*/
+
+const GlobalStats = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	background: #000040;
+	color: #af2a2a;
+	padding: 2rem;
+	border-radius: 2rem;
+	font-size: 2rem;
+	text-align: center;
 `;
 function IndexPage() {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 70
     },
     __self: this
   }, __jsx(GlobalStyle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 71
+    },
+    __self: this
+  }), __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }), __jsx(_components_Carousel__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }), __jsx(_components_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    title: "Test",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
     },
     __self: this
   }), __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 75
     },
     __self: this
-  }, "Corona Virus Tracking App"), __jsx("h3", {
+  }, "Corona Virus Tracking App"), __jsx(GlobalStats, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 76
     },
     __self: this
-  }, "Global Stats"), __jsx(_components_Stats__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
+  }, "Global Stats")), __jsx(_components_Stats__WEBPACK_IMPORTED_MODULE_1__["default"], {
     url: "https://covid19.mathdro.id/api",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 79
     },
     __self: this
   }), __jsx(_components_CountrySelector__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 80
     },
     __self: this
   }));
@@ -520,7 +709,7 @@ function useStats(url) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/tylerouellette/Documents/GitHub/rona/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\Ouell\Documents\GitHub\rona\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -533,6 +722,17 @@ module.exports = __webpack_require__(/*! /Users/tylerouellette/Documents/GitHub/
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-dom");
 
 /***/ }),
 

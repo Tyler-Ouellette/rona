@@ -1,6 +1,10 @@
 import Stats from '../components/Stats';
 import CountrySelector from '../components/CountrySelector';
 import { createGlobalStyle } from 'styled-components';
+import Navbar from '../components/Navbar';
+import Carousel from '../components/Carousel';
+import styled from 'styled-components';
+import Card from '../components/Card';
 
 const GlobalStyle = createGlobalStyle`
 html {
@@ -12,7 +16,7 @@ html {
 //https://thevirustracker.com/api
 
 /*  Extra Colour #/0f1419 I like with the https://dt-cdn.net/images/index-header-gradient-30474b72ac.svg
-display: inherit;
+    display: inherit;
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-pack: center;
@@ -49,12 +53,29 @@ display: inherit;
 }
 */
 
+const GlobalStats = styled.div`
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	background: #000040;
+	color: #af2a2a;
+	padding: 2rem;
+	border-radius: 2rem;
+	font-size: 2rem;
+	text-align: center;
+`;
+
 export default function IndexPage() {
 	return (
 		<div>
 			<GlobalStyle />
+			<Navbar />
+			<Carousel />
+			<Card title='Test' />
 			<h1>Corona Virus Tracking App</h1>
-			<h3>Global Stats</h3>
+			<GlobalStats>
+				<h3>Global Stats</h3>
+			</GlobalStats>
 			<Stats url='https://covid19.mathdro.id/api' />
 			<CountrySelector />
 		</div>
