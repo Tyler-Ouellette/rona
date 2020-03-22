@@ -19,14 +19,33 @@ const StatBlock = styled.div`
 	margin: 1.2rem;
 `;
 
-export default function Stats({ url }) {
+export default function RecoveredStats({ url }) {
 	const { stats, loading, error } = useStats(url);
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error...</p>;
 	if (stats.confirmed && stats.deaths && stats.recovered) {
 		return (
 			<div>
-
+				<StatGrid>
+					<StatBlock>
+						<span>Last Updated: {stats.lastUpdate}</span>
+					</StatBlock>
+					<StatBlock>
+						<span>Last Updated: {stats.image}</span>
+					</StatBlock>
+					<StatBlock>
+						<span>Last Updated: {stats.lastUpdate}</span>
+					</StatBlock>
+					<StatBlock>
+						<span>Last Updated: {stats.lastUpdate}</span>
+					</StatBlock>
+					<StatBlock>
+						<span>Last Updated: {stats.lastUpdate}</span>
+					</StatBlock>
+					<StatBlock>
+						<span>Last Updated: {stats.lastUpdate}</span>
+					</StatBlock>
+				</StatGrid>
 				<StatGrid>
 					<StatBlock>
 						<h3>Confirmed: </h3>

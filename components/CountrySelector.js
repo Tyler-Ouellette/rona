@@ -13,6 +13,13 @@ const Form = styled.div`
 	border-radius: 2rem;
 	font-size: 2rem;
 	text-align: center;
+
+	select {
+	width: 			300px;
+	padding: 		5px;
+	margin: 		10px;
+	font-size: 		16px;
+	}
 `;
 
 export default function CountrySelector() {
@@ -28,12 +35,7 @@ export default function CountrySelector() {
 		<div>
 			<Form>
 				<select
-					style={{
-						width: '300px',
-						padding: '5px',
-						margin: '10px',
-						'font-size': '16px',
-					}}
+
 					onChange={(e) => {
 						setSelectedCountry(e.target.value);
 					}}>

@@ -107,7 +107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/components/Card.js";
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\Card.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -120,7 +120,7 @@ function Card({
       lineNumber: 6
     },
     __self: this
-  }, "test");
+  }, title);
 }
 
 /***/ }),
@@ -135,11 +135,22 @@ function Card({
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Carousel; });
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\Carousel.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Carousel() {
-  return `<h1>This is working</h1>`;
+  return __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, "Nav Carousel");
 }
 
 /***/ }),
@@ -162,7 +173,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_world_flags__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_world_flags__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/components/CountrySelector.js";
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\CountrySelector.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -179,6 +190,13 @@ const Form = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div`
 	border-radius: 2rem;
 	font-size: 2rem;
 	text-align: center;
+
+	select {
+	width: 			300px;
+	padding: 		5px;
+	margin: 		10px;
+	font-size: 		16px;
+	}
 `;
 function CountrySelector() {
   const {
@@ -193,49 +211,43 @@ function CountrySelector() {
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 30
     },
     __self: this
   }, "Loading...");
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 31
     },
     __self: this
   }, "Loading...");
   if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 32
     },
     __self: this
   }, "Error...");
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 35
     },
     __self: this
   }, __jsx(Form, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 36
     },
     __self: this
   }, __jsx("select", {
-    style: {
-      width: '300px',
-      padding: '5px',
-      margin: '10px',
-      'font-size': '16px'
-    },
     onChange: e => {
       setSelectedCountry(e.target.value);
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 37
     },
     __self: this
   }, Object.entries(countries.countries).map(([country, code]) => __jsx("option", {
@@ -244,13 +256,13 @@ function CountrySelector() {
     value: countries.iso3[code],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 43
     },
     __self: this
   }, country))), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 51
     },
     __self: this
   }, "Currently Showing"), __jsx(react_world_flags__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -260,14 +272,14 @@ function CountrySelector() {
     code: selectedCountry,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 52
     },
     __self: this
   })), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_2__["default"], {
     url: `https://covid19.mathdro.id/api/countries/${selectedCountry}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: this
   }));
@@ -287,55 +299,57 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Navbar; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/components/Navbar.js";
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\Navbar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-
-const Bar = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-	display: 'flex';
-	justify-content: 'center';
-	align-items: 'center';
-	padding: '10px 10px';
-	margin: '5px';
+const Header = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #6a6cb7;
+`;
+const Link = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a`
+	display: flex;
+	font-size: 2rem;
+	padding: 2rem 2rem;
+	color: white;
 `;
 function Navbar() {
-  return __jsx(Bar, {
+  return __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 19
     },
     __self: this
-  }, __jsx("a", {
+  }, __jsx(Link, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 20
     },
     __self: this
-  }, "Home"), __jsx("a", {
-    href: "/news",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, "News"), __jsx("a", {
+  }, "Home"), __jsx(Link, {
     href: "/stats",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
-  }, "Stats"), __jsx("a", {
+  }, "Stats"), __jsx(Link, {
+    href: "/news",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, "News"), __jsx(Link, {
     href: "/map",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 23
     },
     __self: this
   }, "Map"));
@@ -358,7 +372,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_useStats__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/useStats */ "./utils/useStats.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/components/Stats.js";
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\Stats.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -377,6 +391,7 @@ const StatBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
 	border-radius: 2rem;
 	font-size: 2rem;
 	text-align: center;
+	margin: 1.2rem;
 `;
 function Stats({
   url
@@ -389,106 +404,94 @@ function Stats({
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, "Loading...");
   if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, "Error...");
 
   if (stats.confirmed && stats.deaths && stats.recovered) {
-    return __jsx(StatGrid, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
-      },
-      __self: this
-    }, __jsx(StatBlock, {
+    return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 28
       },
       __self: this
-    }, __jsx("h3", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29
-      },
-      __self: this
-    }, "Confirmed: "), __jsx("span", {
+    }, __jsx(StatGrid, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 30
       },
       __self: this
-    }, stats.confirmed.value)), __jsx(StatBlock, {
+    }, __jsx(StatBlock, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 32
       },
       __self: this
-    }, __jsx("h3", {
+    }, "Confirmed: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 33
       },
       __self: this
-    }, "Deaths: "), __jsx("span", {
+    }, stats.confirmed.value)), __jsx(StatBlock, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 35
       },
       __self: this
-    }, stats.deaths.value)), __jsx(StatBlock, {
+    }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 36
       },
       __self: this
-    }, __jsx("h3", {
+    }, "Deaths: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 37
       },
       __self: this
-    }, "Recovered: "), __jsx("span", {
+    }, stats.deaths.value)), __jsx(StatBlock, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
-      },
-      __self: this
-    }, stats.recovered.value)));
-  } else {
-    return __jsx(StatGrid, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44
-      },
-      __self: this
-    }, __jsx(StatBlock, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 39
       },
       __self: this
     }, __jsx("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 40
       },
       __self: this
-    }, "Confirmed: "), __jsx("span", {
+    }, "Recovered: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 41
       },
       __self: this
-    }, "Unknown")), __jsx(StatBlock, {
+    }, stats.recovered.value))));
+  } else {
+    return __jsx(StatGrid, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, __jsx(StatBlock, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 49
@@ -500,7 +503,7 @@ function Stats({
         lineNumber: 50
       },
       __self: this
-    }, "Deaths: "), __jsx("span", {
+    }, "Confirmed: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 51
@@ -518,10 +521,28 @@ function Stats({
         lineNumber: 54
       },
       __self: this
-    }, "Recovered: "), __jsx("span", {
+    }, "Deaths: "), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 55
+      },
+      __self: this
+    }, "Unknown")), __jsx(StatBlock, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: this
+    }, __jsx("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: this
+    }, "Recovered: "), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
       },
       __self: this
     }, "Unknown")));
@@ -549,7 +570,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.js");
 /* harmony import */ var _components_Carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Carousel */ "./components/Carousel.js");
 /* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Card */ "./components/Card.js");
-var _jsxFileName = "/Users/tylerouellette/Documents/GitHub/rona/pages/index.js";
+var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -564,9 +585,12 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-seif;
 
 }
+body {
+    background: rgba(15,20,25, 0.9);
+}
 `; //https://thevirustracker.com/api
 
-/*  Extra Colour #/0f1419 I like with the https://dt-cdn.net/images/index-header-gradient-30474b72ac.svg
+/*  Extra Colour  I like with the https://dt-cdn.net/images/index-header-gradient-30474b72ac.svg
     display: inherit;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -608,74 +632,80 @@ const GlobalStats = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div
 	display: grid;
 	align-items: center;
 	justify-items: center;
-	background: #000040;
+	background: #0f1419;
 	color: #af2a2a;
 	padding: 2rem;
 	border-radius: 2rem;
 	font-size: 2rem;
-	text-align: center;
+    text-align: center;
+`;
+const Header = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #272852;
 `;
 function IndexPage() {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 81
     },
     __self: this
-  }, __jsx(GlobalStyle, {
+  }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 82
     },
     __self: this
-  }), __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), __jsx(GlobalStyle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 83
     },
     __self: this
-  }), __jsx(_components_Carousel__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 85
     },
     __self: this
-  }), __jsx(_components_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    title: "Test",
+  }, __jsx(_components_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    title: "Corona Virus Tracking App",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 86
     },
     __self: this
-  }), __jsx("h1", {
+  })), __jsx(_components_Carousel__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 88
     },
     __self: this
-  }, "Corona Virus Tracking App"), __jsx(GlobalStats, {
+  }), __jsx(GlobalStats, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 90
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 91
     },
     __self: this
   }, "Global Stats")), __jsx(_components_Stats__WEBPACK_IMPORTED_MODULE_1__["default"], {
     url: "https://covid19.mathdro.id/api",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 93
     },
     __self: this
   }), __jsx(_components_CountrySelector__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 94
     },
     __self: this
   }));
@@ -740,7 +770,7 @@ function useStats(url) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/tylerouellette/Documents/GitHub/rona/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\Ouell\Documents\GitHub\rona\pages\index.js */"./pages/index.js");
 
 
 /***/ }),

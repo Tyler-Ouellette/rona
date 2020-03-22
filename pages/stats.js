@@ -1,3 +1,6 @@
+import ConfirmedStats from '../components/ConfirmedStats';
+import RecoveredStats from '../components/RecoveredStats';
+import DeathsStats from '../components/DeathsStats';
 import Stats from '../components/Stats';
 import CountrySelector from '../components/CountrySelector';
 import { createGlobalStyle } from 'styled-components';
@@ -72,20 +75,35 @@ const Header = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #272852;
+    background: #6a6cb7;
 `;
-
 
 export default function IndexPage() {
 	return (
 		<div>
-            <Navbar />
 			<GlobalStyle />
-
+			<Navbar />
             <Header>
-		    	<Card title='Corona Virus Tracking App' />
+		    	<Card title='Stats' />
 			</Header>
-			<Carousel />
+
+            <GlobalStats>
+	    		<Card title='Confirmed Detail' />
+			</GlobalStats>
+
+            <ConfirmedStats url='https://covid19.mathdro.id/api/confirmed' />
+
+            <GlobalStats>
+    			<Card title='Recovered Detail' />
+			</GlobalStats>
+
+            <RecoveredStats url='https://covid19.mathdro.id/api/recovered' />
+
+            <GlobalStats>
+                <Card title='Deaths Detail' />
+            </GlobalStats>
+
+            <DeathsStats url='https://covid19.mathdro.id/api/deaths' />
 
 			<GlobalStats>
 				<h3>Global Stats</h3>
