@@ -1,5 +1,6 @@
 import useStats from '../utils/useStats';
 import styled from 'styled-components';
+import '../assets/scss/style.scss'
 
 const StatGrid = styled.div`
 	display: grid;
@@ -23,12 +24,16 @@ export default function ConfirmedStats({ url }) {
 	const { stats, loading, error } = useStats(url);
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error...</p>;
+	console.log(stats);
+	stats.forEach(object => {
+		console.log(object.iso3)
+	});
 	if (stats.confirmed && stats.deaths && stats.recovered) {
 		return (
 			<div>
 				<StatGrid>
 					<StatBlock>
-						<span>Last Updated: {stats.lastUpdate}</span>
+						<span>Last Updated: {stats.map}</span>
 					</StatBlock>
 					<StatBlock>
 						<span>Last Updated: {stats.image}</span>

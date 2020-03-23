@@ -93,6 +93,17 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/scss/style.scss":
+/*!********************************!*\
+  !*** ./assets/scss/style.scss ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./components/Card.js":
 /*!****************************!*\
   !*** ./components/Card.js ***!
@@ -181,29 +192,18 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Form = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div`
-	display: grid;
-	align-items: center;
-	justify-items: center;
-	background: #4775c9;
-	padding: 2rem;
-	border-radius: 2rem;
-	font-size: 2rem;
-	text-align: center;
-
-	select {
-	width: 			300px;
-	padding: 		5px;
-	margin: 		10px;
-	font-size: 		16px;
-	}
-`;
-function CountrySelector() {
+const Form = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div.withConfig({
+  displayName: "CountrySelector__Form",
+  componentId: "sc-1czhn8m-0"
+})(["display:grid;align-items:center;justify-items:center;background:#4775c9;padding:2rem;border-radius:2rem;font-size:2rem;text-align:center;select{width:300px;padding:5px;margin:10px;font-size:16px;}"]);
+function CountrySelector({
+  url
+}) {
   const {
     stats: countries,
     loading,
     error
-  } = Object(_utils_useStats__WEBPACK_IMPORTED_MODULE_1__["default"])('https://covid19.mathdro.id/api/countries');
+  } = Object(_utils_useStats__WEBPACK_IMPORTED_MODULE_1__["default"])(url);
   const {
     0: selectedCountry,
     1: setSelectedCountry
@@ -211,34 +211,34 @@ function CountrySelector() {
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: this
   }, "Loading...");
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 29
     },
     __self: this
   }, "Loading...");
   if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 30
     },
     __self: this
   }, "Error...");
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 33
     },
     __self: this
   }, __jsx(Form, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 34
     },
     __self: this
   }, __jsx("select", {
@@ -247,22 +247,22 @@ function CountrySelector() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 35
     },
     __self: this
   }, Object.entries(countries.countries).map(([country, code]) => __jsx("option", {
-    selected: selectedCountry === countries.iso3[code],
+    defaultValue: selectedCountry === countries.iso3[code],
     key: code,
     value: countries.iso3[code],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 41
     },
     __self: this
   }, country))), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 50
     },
     __self: this
   }, "Currently Showing"), __jsx(react_world_flags__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -272,14 +272,14 @@ function CountrySelector() {
     code: selectedCountry,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 51
     },
     __self: this
   })), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_2__["default"], {
     url: `https://covid19.mathdro.id/api/countries/${selectedCountry}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 58
     },
     __self: this
   }));
@@ -305,18 +305,14 @@ var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\Navba
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const Header = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background: #6a6cb7;
-`;
-const Link = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a`
-	display: flex;
-	font-size: 2rem;
-	padding: 2rem 2rem;
-	color: white;
-`;
+const Header = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Navbar__Header",
+  componentId: "cz6vi3-0"
+})(["display:flex;justify-content:space-evenly;align-items:center;background:#6a6cb7;"]);
+const Ref = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withConfig({
+  displayName: "Navbar__Ref",
+  componentId: "cz6vi3-1"
+})(["display:flex;font-size:2rem;padding:2rem 2rem;color:white;"]);
 function Navbar() {
   return __jsx(Header, {
     __source: {
@@ -324,28 +320,28 @@ function Navbar() {
       lineNumber: 19
     },
     __self: this
-  }, __jsx(Link, {
+  }, __jsx(Ref, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }, "Home"), __jsx(Link, {
+  }, "Home"), __jsx(Ref, {
     href: "/stats",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  }, "Stats"), __jsx(Link, {
+  }, "Stats"), __jsx(Ref, {
     href: "/news",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }, "News"), __jsx(Link, {
+  }, "News"), __jsx(Ref, {
     href: "/map",
     __source: {
       fileName: _jsxFileName,
@@ -377,22 +373,14 @@ var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\components\\Stats
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const StatGrid = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 1rem;
-`;
-const StatBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-	display: grid;
-	align-items: center;
-	justify-items: center;
-	background: #f2f2f2;
-	padding: 2rem;
-	border-radius: 2rem;
-	font-size: 2rem;
-	text-align: center;
-	margin: 1.2rem;
-`;
+const StatGrid = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "Stats__StatGrid",
+  componentId: "sc-1ukxigp-0"
+})(["display:grid;grid-template-columns:repeat(3,1fr);grid-gap:1rem;"]);
+const StatBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "Stats__StatBlock",
+  componentId: "sc-1ukxigp-1"
+})(["display:grid;align-items:center;justify-items:center;background:#f2f2f2;padding:2rem;border-radius:2rem;font-size:2rem;text-align:center;margin:1.2rem;"]);
 function Stats({
   url
 }) {
@@ -570,6 +558,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.js");
 /* harmony import */ var _components_Carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Carousel */ "./components/Carousel.js");
 /* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Card */ "./components/Card.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/scss/style.scss */ "./assets/scss/style.scss");
+/* harmony import */ var _assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_8__);
 var _jsxFileName = "C:\\Users\\Ouell\\Documents\\GitHub\\rona\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -580,15 +572,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["createGlobalStyle"]`
-html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-seif;
 
-}
-body {
-    background: rgba(15,20,25, 0.9);
-}
-`; //https://thevirustracker.com/api
+ //https://thevirustracker.com/api
 
 /*  Extra Colour  I like with the https://dt-cdn.net/images/index-header-gradient-30474b72ac.svg
     display: inherit;
@@ -628,84 +613,70 @@ body {
 }
 */
 
-const GlobalStats = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
-	display: grid;
-	align-items: center;
-	justify-items: center;
-	background: #0f1419;
-	color: #af2a2a;
-	padding: 2rem;
-	border-radius: 2rem;
-	font-size: 2rem;
-    text-align: center;
-`;
-const Header = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #272852;
-`;
+const GlobalStats = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
+  displayName: "pages__GlobalStats",
+  componentId: "sc-1oihg6h-0"
+})(["display:grid;align-items:center;justify-items:center;background:#0f1419;color:#af2a2a;padding:2rem;border-radius:2rem;font-size:2rem;text-align:center;"]);
+const Header = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
+  displayName: "pages__Header",
+  componentId: "sc-1oihg6h-1"
+})(["display:flex;justify-content:center;align-items:center;background:#272852;"]);
 function IndexPage() {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 74
     },
     __self: this
   }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  }), __jsx(GlobalStyle, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 75
     },
     __self: this
   }), __jsx(Header, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 76
     },
     __self: this
   }, __jsx(_components_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
     title: "Corona Virus Tracking App",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 77
     },
     __self: this
   })), __jsx(_components_Carousel__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 79
     },
     __self: this
   }), __jsx(GlobalStats, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 81
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 82
     },
     __self: this
   }, "Global Stats")), __jsx(_components_Stats__WEBPACK_IMPORTED_MODULE_1__["default"], {
     url: "https://covid19.mathdro.id/api",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 84
     },
     __self: this
   }), __jsx(_components_CountrySelector__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    url: "https://covid19.mathdro.id/api/countries",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 85
     },
     __self: this
   }));
@@ -772,6 +743,17 @@ function useStats(url) {
 
 module.exports = __webpack_require__(/*! C:\Users\Ouell\Documents\GitHub\rona\pages\index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 

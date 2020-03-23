@@ -7,7 +7,7 @@ const Header = styled.div`
     background: #6a6cb7;
 `;
 
-const Link = styled.a`
+const Ref = styled.a`
 	display: flex;
 	font-size: 2rem;
 	padding: 2rem 2rem;
@@ -17,10 +17,10 @@ const Link = styled.a`
 export default function Navbar() {
 	return (
 		<Header>
-			<Link href="/">Home</Link>
-			<Link href="/stats">Stats</Link>
-			<Link href="/news">News</Link>
-			<Link href="/map">Map</Link>
+			<Ref href="/">Home</Ref>
+			<Ref href="/stats">Stats</Ref>
+			<Ref href="/news">News</Ref>
+			<Ref href="/map">Map</Ref>
 		</Header>
 	);
 }

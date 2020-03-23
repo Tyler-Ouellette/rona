@@ -5,16 +5,9 @@ import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
 import styled from 'styled-components';
 import Card from '../components/Card';
+import Head from 'next/head';
+import css from '../assets/scss/style.scss'
 
-const GlobalStyle = createGlobalStyle`
-html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-seif;
-
-}
-body {
-    background: rgba(15,20,25, 0.9);
-}
-`;
 
 //https://thevirustracker.com/api
 
@@ -80,8 +73,6 @@ export default function IndexPage() {
 	return (
 		<div>
             <Navbar />
-			<GlobalStyle />
-
             <Header>
 		    	<Card title='Corona Virus Tracking App' />
 			</Header>
@@ -91,7 +82,7 @@ export default function IndexPage() {
 				<h3>Global Stats</h3>
 			</GlobalStats>
 			<Stats url='https://covid19.mathdro.id/api' />
-			<CountrySelector />
+			<CountrySelector url='https://covid19.mathdro.id/api/countries'/>
 		</div>
 	);
 }

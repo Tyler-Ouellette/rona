@@ -15,17 +15,15 @@ const Form = styled.div`
 	text-align: center;
 
 	select {
-	width: 			300px;
-	padding: 		5px;
-	margin: 		10px;
-	font-size: 		16px;
+		width: 			300px;
+		padding: 		5px;
+		margin: 		10px;
+		font-size: 		16px;
 	}
 `;
 
-export default function CountrySelector() {
-	const { stats: countries, loading, error } = useStats(
-		'https://covid19.mathdro.id/api/countries',
-	);
+export default function CountrySelector({url}) {
+	const { stats: countries, loading, error } = useStats(url);
 	const [ selectedCountry, setSelectedCountry ] = useState('USA');
 	if (loading) return <p>Loading...</p>;
 	if (loading) return <p>Loading...</p>;
@@ -41,9 +39,10 @@ export default function CountrySelector() {
 					}}>
 					{Object.entries(countries.countries).map(([ country, code ]) => (
 						<option
-							selected={selectedCountry === countries.iso3[code]}
+							defaultValue={selectedCountry === countries.iso3[code]}
 							key={code}
-							value={countries.iso3[code]}>
+							value={countries.iso3[code]}
+						>
 							{country}
 						</option>
 					))}

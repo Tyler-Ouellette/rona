@@ -8,20 +8,20 @@ import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
 import styled from 'styled-components';
 import Card from '../components/Card';
+import Head from 'next/head'
 
-const GlobalStyle = createGlobalStyle`
-html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-seif;
 
-}
-body {
-    background: rgba(15,20,25, 0.9);
-}
-`;
+// const GlobalStyle = createGlobalStyle`
+// html {
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-seif;
+
+// }
+// `;
 
 //https://thevirustracker.com/api
 
-/*  Extra Colour  I like with the https://dt-cdn.net/images/index-header-gradient-30474b72ac.svg
+/*  Extra Colour is set
+ I like with the https://dt-cdn.net/images/index-header-gradient-30474b72ac.svg
     display: inherit;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -81,7 +81,8 @@ const Header = styled.div`
 export default function IndexPage() {
 	return (
 		<div>
-			<GlobalStyle />
+
+			{/* <GlobalStyle /> */}
 			<Navbar />
             <Header>
 		    	<Card title='Stats' />
