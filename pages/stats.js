@@ -91,8 +91,8 @@ export default function IndexPage() {
             <GlobalStats>
 	    		<Card title='Confirmed Detail' />
 			</GlobalStats>
-
             <ConfirmedStats url='https://covid19.mathdro.id/api/confirmed' />
+
 
             <GlobalStats>
     			<Card title='Recovered Detail' />

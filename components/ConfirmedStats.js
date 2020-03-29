@@ -26,7 +26,7 @@ export default function ConfirmedStats({ url }) {
 	if (error) return <p>Error...</p>;
 	console.log(stats);
 	stats.forEach(object => {
-		console.log(object.iso3)
+		// console.log(object.iso3)
 	});
 	if (stats.confirmed && stats.deaths && stats.recovered) {
 		return (

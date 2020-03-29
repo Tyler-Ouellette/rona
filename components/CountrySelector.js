@@ -23,29 +23,36 @@ const Form = styled.div`
 `;
 
 export default function CountrySelector({url}) {
-	const { stats: countries, loading, error } = useStats(url);
+	const { stats: countryData, loading, error } = useStats(url);
 	const [ selectedCountry, setSelectedCountry ] = useState('USA');
 	if (loading) return <p>Loading...</p>;
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error...</p>;
 
+
 	return (
 		<div>
 			<Form>
-				<select
+				<select>
 
 					onChange={(e) => {
 						setSelectedCountry(e.target.value);
 					}}>
-					{Object.entries(countries.countries).map(([ country, code ]) => (
+					{Object.entries(countryData.countries).map(([ country, code ]) =>{
+					{console.log( code)}
+					return (
 						<option
-							defaultValue={selectedCountry === countries.iso3[code]}
+							defaultValue={selectedCountry === code.name}
 							key={code}
-							value={countries.iso3[code]}
+							value={countryData.iso3}
 						>
-							{country}
+							{code.name}
 						</option>
-					))}
+					)
+					}
+
+
+					)}
 				</select>
 				<h2>Currently Showing</h2>
 				<Flag

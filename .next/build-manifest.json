@@ -28,11 +28,18 @@
     ],
     "/index": [
       "static/runtime/webpack.js",
-<<<<<<< Updated upstream
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
-=======
->>>>>>> Stashed changes
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/stats": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
       "static/runtime/main.js"
     ]
   }
